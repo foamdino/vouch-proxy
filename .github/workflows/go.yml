@@ -33,7 +33,7 @@ jobs:
         echo ${GOPATH}
         echo ${GOROOT}
       env:
-        GOPATH: /home/runner/work/vouch-proxy
+        GOPATH: /home/runner/work/vouch-proxy/go
 
 #     - name: Get dependencies
 #       run: |
@@ -45,8 +45,8 @@ jobs:
     - name: Get
       run: |
         pwd
-        ls -la /home/runner/work/vouch-proxy/vouch-proxy/go
-        /home/runner/work/vouch-proxy/vouch-proxy/do.sh goget
+        ls -la /home/runner/work/vouch-proxy/vouch-proxy/go/src/github.com/foamdino/vouch-proxy
+        /home/runner/work/vouch-proxy/vouch-proxy/go/src/github.com/foamdino/vouch-proxy/do.sh goget
       env:
         GOPATH: /home/runner/work/vouch-proxy/go
 
@@ -55,7 +55,7 @@ jobs:
 
     - name: Build
       run: |
-        /home/runner/work/vouch-proxy/vouch-proxy/do.sh build
+        /home/runner/work/vouch-proxy/vouch-proxy/go/src/github.com/foamdino/vouch-proxy/do.sh build
       env:
         GOPATH: /home/runner/work/vouch-proxy/go
       
