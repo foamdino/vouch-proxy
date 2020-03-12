@@ -22,6 +22,7 @@ jobs:
     - name: Check out code into the Go module directory
       uses: actions/checkout@v2
       with:
+        fetch-depth: 1
         path: go/src/github.com/foamdino/vouch-proxy
 
     - name: Debug
@@ -44,8 +45,6 @@ jobs:
     - name: Get
       run: |
         pwd
-        ls -la /home/runner
-        ls -la /home/runner/work
         ls -la /home/runner/work/vouch-proxy/vouch-proxy/go
         /home/runner/work/vouch-proxy/vouch-proxy/do.sh goget
       env:
