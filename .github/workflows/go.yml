@@ -46,10 +46,10 @@ jobs:
         pwd
         ls -la /home/runner
         ls -la /home/runner/work
-        ls -la /home/runner/work/vouch-proxy
+        ls -la /home/runner/work/vouch-proxy/vouch-proxy/go
         /home/runner/work/vouch-proxy/vouch-proxy/do.sh goget
       env:
-        GOPATH: /home/runner/work/vouch-proxy
+        GOPATH: /home/runner/work/vouch-proxy/go
 
 #     - name: Build
 #       run: go build -v .
@@ -58,5 +58,5 @@ jobs:
       run: |
         /home/runner/work/vouch-proxy/vouch-proxy/do.sh build
       env:
-        GOPATH: /home/runner/work/vouch-proxy
+        GOPATH: /home/runner/work/vouch-proxy/go
       
