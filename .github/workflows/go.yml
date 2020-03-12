@@ -43,7 +43,8 @@ jobs:
 #         fi
     - name: Get
       run: |
-        ./do.sh goget
+        ls -la
+        /home/runner/work/vouch-proxy/vouch-proxy/do.sh goget
       env:
         GOPATH: /home/runner/work/vouch-proxy
 
@@ -52,7 +53,7 @@ jobs:
 
     - name: Build
       run: |
-        ./do.sh build
+        /home/runner/work/vouch-proxy/vouch-proxy/do.sh build
       env:
         GOPATH: /home/runner/work/vouch-proxy
       
